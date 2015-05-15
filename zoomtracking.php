@@ -24,7 +24,7 @@
  *  International Registered Trademark & Property of PrestaShop SA
 **/
 
-  if (!defined('_PS_VERSION_'))
+	if (!defined('_PS_VERSION_'))
 		exit;
 		
 	class ZoomTracking extends Module
@@ -57,8 +57,7 @@
 			if (!parent::install() ||
 				!$this->registerHook('body') ||
 				!$this->registerHook('header') ||
-				!Configuration::updateValue('ZOOMTRACKING_NAME', 'Zoom Tracking')
-				)
+				!Configuration::updateValue('ZOOMTRACKING_NAME', 'Zoom Tracking'))
 				return false;
 			return true;
 		}
@@ -66,8 +65,7 @@
 		public function uninstall()
 		{
 			if (!parent::uninstall() ||
-				!Configuration::deleteByName('ZOOMTRACKING_NAME')
-			)
+				!Configuration::deleteByName('ZOOMTRACKING_NAME'))
 				return false;
 			return true;
 		}
