@@ -5,14 +5,14 @@
 		
 	class ZoomTracking extends Module
 	{
-		public function __construct();
+		public function __construct()
 		{
 			$this->name = 'zoomtracking';
 			$this->tab = 'shipping_logistics';
 			$this->version = '0.1b';
 			$this->author = 'Jesus Lau';
 			$this->need_instance = '1';
-			$this->ps_versions_compliancy = 'array('min' => 1.6, 'max' => _PS_VERSION_);
+			$this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
 			$this->bootstrap = 'true';
 			
 			parent::__construct();
@@ -25,7 +25,7 @@
 				$this->warning = 'No se ha escrito ningún nombre';
 		}
 		
-		public function install();
+		public function install()
 		{
 			if (Shop::isFeatureActive())
 				Shop::setContext(Shop::CONTEXT_ALL);
@@ -39,7 +39,7 @@
 			return true;
 		}
 		
-		public function uninstall();
+		public function uninstall()
 		{
 			if (!parent::uninstall() ||
 				!Configuration::deleteByName('MYMODULE_NAME')
