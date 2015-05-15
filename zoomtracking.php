@@ -23,17 +23,15 @@
  *  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  *  International Registered Trademark & Property of PrestaShop SA
  **/
-
 if (!defined('_PS_VERSION_'))
 	exit;
-
 class ZoomTracking extends Module
 {
 	public function __construct()
 	{
 		$this->name = 'zoomtracking';
 		$this->tab = 'shipping_logistics';
-		$this->version = '1.0';
+		$this->version = '1.0.0';
 		$this->author = 'Jesus Lau';
 		$this->need_instance = '1';
 		$this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
