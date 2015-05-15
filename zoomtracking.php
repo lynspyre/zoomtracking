@@ -33,7 +33,7 @@
 		{
 			$this->name = 'zoomtracking';
 			$this->tab = 'shipping_logistics';
-			$this->version = '0.1b';
+			$this->version = '0.1';
 			$this->author = 'Jesus Lau';
 			$this->need_instance = '1';
 			$this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
