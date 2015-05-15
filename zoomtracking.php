@@ -5,7 +5,7 @@
 		
 	class ZoomTracking extends Module
 	{
-		public function __construct()
+		public function __construct();
 		{
 			$this->name = 'zoomtracking';
 			$this->tab = 'shipping_logistics';
@@ -39,7 +39,7 @@
 			return true;
 		}
 		
-		public function uninstall()
+		public function uninstall();
 		{
 			if (!parent::uninstall() ||
 				!Configuration::deleteByName('MYMODULE_NAME')
